@@ -15,11 +15,24 @@
       </li>
     </ul>
 
-    <img
+    <audio id="x" controls loop autoplay>
+      <source src="audio.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- <img
       src="morning.jpg"
       alt=""
       width="100%"
       style="position: absolute; bottom: 0"
-    />
+    /> -->
+
+    <script>
+      window.onload = function () {
+        var audio = document.getElementById("x");
+        audio.play().catch(function (error) {
+          console.log("alala");
+        });
+      };
+    </script>
   </body>
 </html>
