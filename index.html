@@ -29,9 +29,8 @@
     <script>
       window.onload = function () {
         var audio = document.getElementById("x");
-        audio.play().catch(function (error) {
-          console.log("alala");
-        });
+        audio.muted = false; // Unmute the audio
+        audio.play();
       };
     </script>
   </body>
