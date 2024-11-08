@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello</title>
   </head>
-  <body style="height: 100vh">
-    <h2>💐️تمنياتي لكم بالتوفيق و ارسل لكم جميع التهاني الحارة💐️</h2>
-    <ul>
-      <li>
-        <h2>الاولويات</h2>
-        <h3>الصاجية</h3>
-        <h3>تصحو الصبح</h3>
-      </li>
-    </ul>
+  <body style="height: 100vh; display: flex; flex-direction: row">
+    <div>
+      <h2>💐️تمنياتي لكم بالتوفيق و ارسل لكم جميع التهاني الحارة💐️</h2>
+      <ul>
+        <li>
+          <h2>الاولويات</h2>
+          <h3>الصاجية</h3>
+          <h3>تصحو الصبح</h3>
+        </li>
+      </ul>
+    </div>
 
-    <audio id="x" controls loop autoplay>
+    <audio id="x" controls loop autoplay hidden>
       <source src="audio.mp3" type="audio/mp3" />
     </audio>
 
@@ -27,11 +29,11 @@
     />
 
     <script>
-      window.onload = function () {
-        var audio = document.getElementById("x");
-        audio.muted = false; // Unmute the audio
-        audio.play();
-      };
+      window.addEventListener("load", function () {
+        var audio = document.getElementById("myAudio");
+        // audio.muted = false; // Unmute the audio
+        audio.play(); // Start playing the audio
+      });
     </script>
   </body>
 </html>
